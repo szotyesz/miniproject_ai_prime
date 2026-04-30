@@ -9,11 +9,18 @@ bool isPrime(int n) {
 }
 
 int nextPrime(int start) {
-    int num = start + 1;
-    while (!isPrime(num)) {
-        ++num;
+    if (start < 2) return 2;
+    if (start < 3) return 3;
+    if (start < 5) return 5;
+
+    int k = (start + 2) / 6;
+    while (true) {
+        int c1 = 6 * k - 1;
+        int c2 = 6 * k + 1;
+        if (c1 > start && isPrime(c1)) return c1;
+        if (c2 > start && isPrime(c2)) return c2;
+        ++k;
     }
-    return num;
 }
 
 int main() {
