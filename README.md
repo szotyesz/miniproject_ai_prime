@@ -15,3 +15,10 @@ Another failure note:
 Do you know  of an algorithm that is deterministic, works for numbers between the 2^80 and 2^110 range in a reasonable time, if yes could you implement it here by only using stl and gcc clang default extensions?
 
 It wanted deterministic miller rabin in plan mode, then realised he is not sure that it is fine for big numbers, so wanted an other algo, which became too complex for act mode...
+
+
+Another failure note:
+
+Create a plan to refactor isPrime using AKS algorithm. Plan out the functions necessary. Keep each function as small as possible. Dont use any external library.
+
+Took way too long and some functions were suspiciously wrong...
